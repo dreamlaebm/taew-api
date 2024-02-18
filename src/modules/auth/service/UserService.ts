@@ -1,12 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/modules/common/provider/prisma.service';
-import CreateUserDto from '../model/CreateUserDto';
 import { randomBytes } from 'crypto';
 import { Prisma } from '@prisma/client';
 import { JwtService } from '@nestjs/jwt';
-import { hash } from 'argon2';
+import { hash, verify } from 'argon2';
+import CreateUserDto from '../model/CreateUserDto';
+import LoginUserDto from '../model/LoginUserDto';
 
 export class UserAlreadyExistsError extends Error {}
+export class UserNotFoundError extends Error {}
+export class CredentialMismatch extends Error {}
 
 @Injectable()
 export class UserService {
@@ -15,7 +18,27 @@ export class UserService {
     private jwtService: JwtService,
   ) {}
 
-  public async createUser(createUserDto: CreateUserDto) {
+  public async login({ email, password }: LoginUserDto): Promise<string> {
+    const account = await this.prisma.user.findFirst({
+      where: {
+        email,
+      },
+    });
+
+    if (!account) throw new UserNotFoundError();
+
+    const matches = await verify(account.password, password);
+
+    if (!matches) throw new CredentialMismatch();
+
+    return await this.jwtService.signAsync({
+      token: account.accessToken,
+      id: account.id,
+      username: account.username,
+    });
+  }
+
+  public async create(createUserDto: CreateUserDto) {
     const accessToken = randomBytes(32).toString('hex');
 
     try {
@@ -26,14 +49,18 @@ export class UserService {
 
       data.password = await hash(data.password);
 
-      const newUser = await this.prisma.user.create({
+      const {
+        accessToken: token,
+        id,
+        username,
+      } = await this.prisma.user.create({
         data,
       });
 
       return await this.jwtService.signAsync({
-        token: newUser.accessToken,
-        id: newUser.id,
-        username: newUser.username,
+        token,
+        id,
+        username,
       });
     } catch (error) {
       if (!(error instanceof Prisma.PrismaClientKnownRequestError)) throw error;
