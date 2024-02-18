@@ -1,0 +1,59 @@
+services:
+  # migrator:
+  #   restart: on-failure
+  #   build:
+  #     context: .
+  #     dockerfile: Migrator.dockerfile
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - DATABASE_URL="postgresql://postgres:password@db:5432/simpleauthsystem?schema=public"
+
+  # web1: &app
+  #   restart: on-failure
+  #   build: .
+  #   hostname: apiserver_atumalaka
+  #   ports:
+  #     - '8080'
+  #   depends_on:
+  #     - db
+  #     - migrator
+  #   environment:
+  #     - DATABASE_URL="postgresql://postgres:password@db:5432/simpleauthsystem?schema=public"
+  #     - TOKEN_SECRET="793d5fb9806c40198d62b0992354ccf051e2c148cd05e26b6df8b5b41dc12b7306d60709a5df676de43e99e72f3906680b8bacec64fbc4639d64e66406254d12"
+
+  # web2:
+  #   <<: *app
+  #   hostname: apiserver_cristina
+
+  # nginx:
+  #   build: ./nginx
+  #   ports:
+  #     - '9000:80'
+  #   depends_on:
+  #     - web1
+  #     - web2
+
+  database:
+    image: postgres:15
+    hostname: katalina
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /data/postgres
+    volumes:
+      - postgres_data:/data/postgres
+
+volumes:
+  postgres_data:
+
+
