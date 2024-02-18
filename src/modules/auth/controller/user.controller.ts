@@ -2,6 +2,7 @@ import {
   BadRequestException,
   Body,
   Controller,
+  Get,
   HttpCode,
   HttpStatus,
   InternalServerErrorException,
@@ -12,7 +13,12 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  ApiBearerAuth,
+  ApiOperation,
+  ApiResponse,
+  ApiTags,
+} from '@nestjs/swagger';
 import CreateUserDto from '../model/CreateUserDto';
 import { UserMutationResponse } from '../model/CreateUserResponse';
 import {
@@ -22,6 +28,8 @@ import {
   UserService,
 } from '../service/UserService';
 import LoginUserDto from '../model/LoginUserDto';
+import { User, UsersFromTokenPipe, WithToken } from '../flow/users.pipe';
+import DecryptedAccount from '../model/DecryptedResponse';
 
 @Controller('/api/auth')
 @ApiTags('authentication')
@@ -78,6 +86,30 @@ export default class UserController {
       if (error instanceof CredentialMismatch)
         throw new UnauthorizedException('CRENDENTIAL_MISMATCHES');
       throw error;
+    }
+  }
+
+  @Get('decrypt')
+  @ApiOperation({ summary: 'Recovers non-sensible data from the token' })
+  @ApiBearerAuth()
+  @ApiResponse({ status: HttpStatus.OK, type: DecryptedAccount })
+  decrypt(@WithToken(UsersFromTokenPipe) user: User): DecryptedAccount {
+    return new DecryptedAccount(user.id, user.username, user.displayName);
+  }
+
+  @Get('refresh')
+  @ApiOperation({ summary: 'Refreshes the token' })
+  @ApiBearerAuth()
+  @ApiResponse({ status: HttpStatus.OK, type: UserMutationResponse })
+  async refresh(
+    @WithToken(UsersFromTokenPipe) user: User,
+  ): Promise<UserMutationResponse> {
+    try {
+      const accessToken = await this.userService.login(user, true);
+      return new UserMutationResponse(accessToken);
+    } catch (error) {
+      this.logger.error('UNABLE TO REFRESH TOKEN!', error);
+      throw new InternalServerErrorException();
     }
   }
 }

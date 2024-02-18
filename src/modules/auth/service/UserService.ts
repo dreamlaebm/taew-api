@@ -8,8 +8,12 @@ import CreateUserDto from '../model/CreateUserDto';
 import LoginUserDto from '../model/LoginUserDto';
 
 export class UserAlreadyExistsError extends Error {}
-export class UserNotFoundError extends Error {}
-export class CredentialMismatch extends Error {}
+export class UserNotFoundError extends Error {
+  message: string = 'User not found';
+}
+export class CredentialMismatch extends Error {
+  message: string = 'Credential Mismatch';
+}
 
 @Injectable()
 export class UserService {
@@ -18,18 +22,24 @@ export class UserService {
     private jwtService: JwtService,
   ) {}
 
-  public async login({ email, password }: LoginUserDto): Promise<string> {
+  public async login(
+    { email, password }: LoginUserDto,
+    refreshes?: boolean,
+  ): Promise<string> {
     const account = await this.prisma.user.findFirst({
       where: {
         email,
+        password: refreshes ? password : undefined,
       },
     });
 
     if (!account) throw new UserNotFoundError();
 
-    const matches = await verify(account.password, password);
+    if (!refreshes) {
+      const matches = await verify(account.password, password);
 
-    if (!matches) throw new CredentialMismatch();
+      if (!matches) throw new CredentialMismatch();
+    }
 
     return await this.jwtService.signAsync({
       token: account.accessToken,

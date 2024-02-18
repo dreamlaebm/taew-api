@@ -11,7 +11,15 @@ async function bootstrap() {
     .setTitle('Taew API')
     .setDescription("The instant messaging platform that doesn't like y-1")
     .setVersion('1.0')
-    .addTag('messaging')
+    .addBearerAuth({
+      description: `Please put your JWT Token here`,
+      name: 'Authorization',
+      bearerFormat: 'Bearer',
+      scheme: 'Bearer',
+      type: 'http',
+      in: 'Header',
+    })
+
     .build();
 
   const document = SwaggerModule.createDocument(app, config);

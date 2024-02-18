@@ -8,21 +8,21 @@ export default class CreateUserDto {
     nullable: true,
     minimum: 2,
     maximum: 32,
-    example: 'Ryster Diffusion',
+    example: 'John Doe',
   })
   public displayName?: string;
 
   @IsNotEmpty()
   @Length(2, 28)
-  @ApiProperty({ minimum: 2, maximum: 28, example: 'ryster' })
+  @ApiProperty({ minimum: 2, maximum: 28, example: 'johndoe' })
   public username: string;
 
   @IsEmail()
-  @ApiProperty({ example: 'ryster@duck.com' })
+  @ApiProperty({ example: 'john@doe.com' })
   public email: string;
 
   @IsNotEmpty()
   @Length(8, 72)
-  @ApiProperty({ minimum: 8, maximum: 72, example: 'popcorn@KEK12' })
+  @ApiProperty({ minimum: 8, maximum: 72, example: 'apple12345@SAUCE' })
   public password: string;
 }
