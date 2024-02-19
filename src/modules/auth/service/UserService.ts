@@ -8,9 +8,11 @@ import CreateUserDto from '../model/CreateUserDto';
 import LoginUserDto from '../model/LoginUserDto';
 
 export class UserAlreadyExistsError extends Error {}
+
 export class UserNotFoundError extends Error {
   message: string = 'User not found';
 }
+
 export class CredentialMismatch extends Error {
   message: string = 'Credential Mismatch';
 }
