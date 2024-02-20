@@ -1,38 +1,59 @@
 services:
-  # migrator:
-  #   restart: on-failure
-  #   build:
-  #     context: .
-  #     dockerfile: Migrator.dockerfile
-  #   depends_on:
-  #     - db
-  #   environment:
-  #     - DATABASE_URL="postgresql://postgres:password@db:5432/simpleauthsystem?schema=public"
+  app1: &app
+    healthcheck:
+      test: [ "CMD-SHELL", "curl localhost:3000/api/telemetry/ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: on-failure
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: web
+    hostname: fire
+    ports:
+      - '8080'
+    depends_on:
+      - database
+      - migrator
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      TOKEN_SECRET: ${TOKEN_SECRET}
+      NODE_ENV: production
 
-  # web1: &app
-  #   restart: on-failure
-  #   build: .
-  #   hostname: apiserver_atumalaka
-  #   ports:
-  #     - '8080'
-  #   depends_on:
-  #     - db
-  #     - migrator
-  #   environment:
-  #     - DATABASE_URL="postgresql://postgres:password@db:5432/simpleauthsystem?schema=public"
-  #     - TOKEN_SECRET="793d5fb9806c40198d62b0992354ccf051e2c148cd05e26b6df8b5b41dc12b7306d60709a5df676de43e99e72f3906680b8bacec64fbc4639d64e66406254d12"
+  app2:
+    <<: *app
+    hostname: cold
 
-  # web2:
-  #   <<: *app
-  #   hostname: apiserver_cristina
+  app3:
+    <<: *app
+    hostname: earth
 
-  # nginx:
-  #   build: ./nginx
-  #   ports:
-  #     - '9000:80'
-  #   depends_on:
-  #     - web1
-  #     - web2
+  app4:
+    <<: *app
+    hostname: sound
+
+  migrator:
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: migrator
+    depends_on:
+      - database
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: ${DATABASE_URL}
+
+  nginx:
+    build: ./nginx
+    ports:
+      - '9000:80'
+    depends_on:
+      - app1
+      - app2
+      - app3
+      - app4
 
   database:
     image: postgres:15

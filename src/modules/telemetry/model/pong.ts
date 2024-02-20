@@ -1,3 +1,6 @@
+import { ApiProperty } from '@nestjs/swagger';
+
 export class Pong {
-	constructor(public readonly pong: boolean) {}
+  @ApiProperty({ description: 'always true', example: true })
+  pong = true;
 }
