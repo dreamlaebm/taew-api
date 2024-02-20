@@ -8,6 +8,9 @@ const HTTP_PORT = Number(process.env.HTTP_PORT) || 3000;
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors({
+    origin: (process.env.CORS_ORIGIN || '').split(';'),
+  });
 
   const config = new DocumentBuilder()
     .setTitle('Taew API')
@@ -21,7 +24,6 @@ async function bootstrap() {
       type: 'http',
       in: 'Header',
     })
-
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
