@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/modules/common/provider/prisma.service';
 import { randomBytes } from 'crypto';
-import { Prisma } from '@prisma/client';
+import { Prisma, User } from '@prisma/client';
 import { JwtService } from '@nestjs/jwt';
 import { hash, verify } from 'argon2';
 import CreateUserDto from '../model/CreateUserDto';
@@ -47,6 +47,14 @@ export class UserService {
       token: account.accessToken,
       id: account.id,
       username: account.username,
+    });
+  }
+
+  public async deleteAccount(user: User) {
+    await this.prisma.user.delete({
+      where: {
+        id: user.id,
+      },
     });
   }
 
