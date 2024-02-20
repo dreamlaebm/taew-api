@@ -112,4 +112,16 @@ export default class UserController {
       throw new InternalServerErrorException();
     }
   }
+
+  @Post('delete')
+  @ApiOperation({ summary: 'Deletes the account' })
+  @ApiBearerAuth()
+  @ApiResponse({
+    status: HttpStatus.NO_CONTENT,
+    description: 'Deleted the account.',
+  })
+  @HttpCode(HttpStatus.NO_CONTENT)
+  async deleteAccount(@WithToken(UsersFromTokenPipe) user: User) {
+    await this.userService.deleteAccount(user);
+  }
 }

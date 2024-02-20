@@ -12,9 +12,13 @@ datasource db {
 
 model User {
   id          Int     @id @default(autoincrement())
+  email       String  @unique
   accessToken String  @unique @db.Char(64)
   username    String  @unique @db.VarChar(28)
   password    String  @db.VarChar(128)
   displayName String? @db.VarChar(32)
-  email       String  @unique
+  bio         String? @db.VarChar(150)
+
+  followedBy User[] @relation("UserFollows")
+  following  User[] @relation("UserFollows")
 }
