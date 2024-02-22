@@ -75,7 +75,7 @@ export class FollowService {
 
   async info(username: string): Promise<UserInformation> {
     try {
-      const result = await this.prisma.user.findUnique({
+      const result = await this.prisma.user.findUniqueOrThrow({
         where: {
           username,
         },
