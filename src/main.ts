@@ -8,9 +8,9 @@ const HTTP_PORT = Number(process.env.HTTP_PORT) || 3000;
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  app.enableCors({
-    origin: (process.env.CORS_ORIGIN || '').split(';'),
-  });
+  // app.enableCors({
+  //   origin: (process.env.CORS_ORIGIN || '').split(';'),
+  // });
 
   const config = new DocumentBuilder()
     .setTitle('Taew API')
@@ -28,7 +28,21 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-
+  app.enableCors({
+    origin: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    // allowed headers
+    allowedHeaders: [
+      'Content-Type',
+      'Origin',
+      'X-Requested-With',
+      'Accept',
+      'Authorization',
+    ],
+    // headers exposed to the client
+    exposedHeaders: ['Authorization'],
+    credentials: true,
+  });
   await app.listen(HTTP_PORT);
 }
 

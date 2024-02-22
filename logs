@@ -1,0 +1,532 @@
+app3-1      | 
+app3-1      | > taew-api@1.0.0 start /app
+app3-1      | > nest start
+app3-1      | 
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +32ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +46ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +5ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +109ms[39m
+app3-1      |  ELIFECYCLE  Command failed.
+app3-1      | 
+app3-1      | > taew-api@1.0.0 start /app
+app3-1      | > nest start
+app3-1      | 
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +19ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +24ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +2ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +0ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app3-1      | [32m[Nest] 43  - [39m02/21/2024, 8:56:30 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +751ms[39m
+nginx-1     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+migrator-1  | Environment variables loaded from .env
+migrator-1  | Prisma schema loaded from prisma/schema.prisma
+migrator-1  | Datasource "db": PostgreSQL database "taew", schema "public" at "katalina:5432"
+migrator-1  | 
+database-1  | 
+database-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+database-1  | 
+database-1  | 2024-02-20 20:30:54.569 UTC [1] LOG:  starting PostgreSQL 15.6 (Debian 15.6-1.pgdg120+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+migrator-1  | 4 migrations found in prisma/migrations
+migrator-1  | 
+migrator-1  | 
+migrator-1  | No pending migrations to apply.
+migrator-1  | Environment variables loaded from .env
+migrator-1  | Prisma schema loaded from prisma/schema.prisma
+migrator-1  | Datasource "db": PostgreSQL database "taew", schema "public" at "katalina:5432"
+migrator-1  | 
+app4-1      | 
+app4-1      | > taew-api@1.0.0 start /app
+app4-1      | > nest start
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+database-1  | 2024-02-20 20:30:54.569 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+database-1  | 2024-02-20 20:30:54.569 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+app4-1      | 
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +35ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +42ms[39m
+migrator-1  | Error: P1001: Can't reach database server at `katalina`:`5432`
+migrator-1  | 
+migrator-1  | Please make sure your database server is running at `katalina`:`5432`.
+migrator-1  | Environment variables loaded from .env
+migrator-1  | Prisma schema loaded from prisma/schema.prisma
+migrator-1  | Datasource "db": PostgreSQL database "taew", schema "public" at "katalina:5432"
+migrator-1  | 
+migrator-1  | 4 migrations found in prisma/migrations
+migrator-1  | 
+migrator-1  | 
+app2-1      | 
+app2-1      | > taew-api@1.0.0 start /app
+app2-1      | > nest start
+app2-1      | 
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +35ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +4ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +1ms[39m
+app1-1      | 
+app1-1      | > taew-api@1.0.0 start /app
+app1-1      | > nest start
+app1-1      | 
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +1ms[39m
+migrator-1  | No pending migrations to apply.
+database-1  | 2024-02-20 20:30:54.579 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+database-1  | 2024-02-20 20:30:54.592 UTC [30] LOG:  database system was interrupted; last known up at 2024-02-20 20:27:21 UTC
+database-1  | 2024-02-20 20:30:54.709 UTC [30] LOG:  database system was not properly shut down; automatic recovery in progress
+database-1  | 2024-02-20 20:30:54.715 UTC [30] LOG:  redo starts at 0/3B082D0
+database-1  | 2024-02-20 20:30:54.716 UTC [30] WARNING:  could not open directory "base/24709": No such file or directory
+database-1  | 2024-02-20 20:30:54.716 UTC [30] CONTEXT:  WAL redo at 0/3B08380 for Database/DROP: dir 1663/24709
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +47ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +5ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +32ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+nginx-1     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1     | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: using the "epoll" event method
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +1ms[39m
+database-1  | 2024-02-20 20:30:54.716 UTC [30] WARNING:  some useless files may be left behind in old database directory "base/24709"
+database-1  | 2024-02-20 20:30:54.716 UTC [30] CONTEXT:  WAL redo at 0/3B08380 for Database/DROP: dir 1663/24709
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +136ms[39m
+app4-1      |  ELIFECYCLE  Command failed.
+app4-1      | 
+app4-1      | > taew-api@1.0.0 start /app
+app4-1      | > nest start
+app4-1      | 
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +24ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +31ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +3ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +0ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app4-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:30 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +737ms[39m
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: nginx/1.25.4
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: OS: Linux 6.5.0-18-generic
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker processes
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 28
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 29
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 30
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 31
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 32
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 33
+database-1  | 2024-02-20 20:30:54.716 UTC [30] LOG:  invalid record length at 0/3B08448: wanted 24, got 0
+database-1  | 2024-02-20 20:30:54.716 UTC [30] LOG:  redo done at 0/3B08410 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 34
+nginx-1     | 2024/02/20 20:30:56 [notice] 1#1: start worker process 35
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:44:42 +0000] "OPTIONS /api/auth/createUser HTTP/1.1" 404 86 "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:48:05 +0000] "OPTIONS /api/auth/createUser HTTP/1.1" 404 86 "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:48:28 +0000] "OPTIONS /api/auth/createUser HTTP/1.1" 404 86 "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:53:54 +0000] "post /api/auth/createUser HTTP/1.1" 400 157 "-" "-" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:54:05 +0000] "post /api/auth/createUser HTTP/1.1" 400 157 "-" "-" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:55:00 +0000] "OPTIONS /api/auth/createUser HTTP/1.1" 404 86 "http://localhost:3001/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:55:14 +0000] "OPTIONS /api/auth/refresh HTTP/1.1" 404 83 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:55:14 +0000] "OPTIONS /api/auth/refresh HTTP/1.1" 404 83 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:55:25 +0000] "OPTIONS /api/auth/createUser HTTP/1.1" 404 86 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" "-"
+nginx-1     | 172.22.0.1 - - [21/Feb/2024:20:55:29 +0000] "OPTIONS /api/auth/createUser HTTP/1.1" 404 86 "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36" "-"
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 28#28: gracefully shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 29#29: gracefully shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 31#31: gracefully shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 32#32: gracefully shutting down
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +42ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +5ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +0ms[39m
+database-1  | 2024-02-20 20:30:54.739 UTC [28] LOG:  checkpoint starting: end-of-recovery immediate wait
+database-1  | 2024-02-20 20:30:54.773 UTC [28] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.005 s, total=0.039 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +115ms[39m
+database-1  | 2024-02-20 20:30:54.784 UTC [1] LOG:  database system is ready to accept connections
+database-1  | 2024-02-20 20:35:54.873 UTC [28] LOG:  checkpoint starting: time
+app2-1      |  ELIFECYCLE  Command failed.
+app2-1      | 
+app2-1      | > taew-api@1.0.0 start /app
+app2-1      | > nest start
+app2-1      | 
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +24ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 43  - [39m02/20/2024, 8:31:05 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +133ms[39m
+app1-1      |  ELIFECYCLE  Command failed.
+app1-1      | 
+app1-1      | > taew-api@1.0.0 start /app
+app1-1      | > nest start
+app1-1      | 
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +19ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCommonModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTelemetryModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +24ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +2ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +0ms[39m
+database-1  | 2024-02-20 20:35:55.417 UTC [28] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.010 s, total=0.545 s; sync files=5, longest=0.007 s, average=0.002 s; distance=6 kB, estimate=6 kB
+database-1  | 2024-02-21 17:27:23.677 UTC [21377] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:27:23.677 UTC [21377] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:27:23.677 UTC [21377] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:29:01.089 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 17:29:02.475 UTC [28] LOG:  checkpoint complete: wrote 14 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.335 s, sync=0.018 s, total=1.387 s; sync files=10, longest=0.010 s, average=0.002 s; distance=1 kB, estimate=6 kB
+database-1  | 2024-02-21 17:34:01.575 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 17:34:01.836 UTC [28] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.209 s, sync=0.016 s, total=0.262 s; sync files=3, longest=0.013 s, average=0.006 s; distance=0 kB, estimate=5 kB
+database-1  | 2024-02-21 17:36:22.774 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:36:22.774 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:36:22.774 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:38:02.263 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:38:02.263 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:38:02.263 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:38:19.551 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:38:19.551 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPingController {/api/telemetry}:[39m[38;5;3m +31ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +0ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app1-1      | [32m[Nest] 42  - [39m02/21/2024, 8:56:30 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +751ms[39m
+database-1  | 2024-02-21 17:38:19.551 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:38:46.703 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:38:46.703 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:38:46.703 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+nginx-1     | 2024/02/21 20:56:20 [notice] 33#33: gracefully shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 29#29: exiting
+nginx-1     | 2024/02/21 20:56:20 [notice] 33#33: exiting
+nginx-1     | 2024/02/21 20:56:20 [notice] 28#28: exiting
+nginx-1     | 2024/02/21 20:56:20 [notice] 32#32: exiting
+nginx-1     | 2024/02/21 20:56:20 [notice] 31#31: exiting
+nginx-1     | 2024/02/21 20:56:20 [notice] 35#35: gracefully shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 32#32: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 28#28: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 33#33: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 29#29: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 31#31: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 30#30: gracefully shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 34#34: gracefully shutting down
+nginx-1     | 2024/02/21 20:56:20 [notice] 35#35: exiting
+nginx-1     | 2024/02/21 20:56:20 [notice] 30#30: exiting
+database-1  | 2024-02-21 17:39:01.935 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 17:39:02.589 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.607 s, sync=0.017 s, total=0.654 s; sync files=7, longest=0.010 s, average=0.003 s; distance=4 kB, estimate=5 kB
+database-1  | 2024-02-21 17:40:15.358 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:40:15.358 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:40:15.358 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:41:17.373 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:41:17.373 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+nginx-1     | 2024/02/21 20:56:20 [notice] 35#35: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 34#34: exiting
+nginx-1     | 2024/02/21 20:56:20 [notice] 30#30: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 34#34: exit
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 33 exited with code 0
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 35 exited with code 0
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 29 (SIGIO) received
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 31 exited with code 0
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 29 (SIGIO) received
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 29 exited with code 0
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 30 exited with code 0
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/telemetry/ping, GET} route[39m[38;5;3m +3ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/auth}:[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/createUser, POST} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/decrypt, GET} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, GET} route[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/delete, POST} route[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mFollowController {/api/user}:[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/follow, POST} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/unfollow, POST} route[39m[38;5;3m +0ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:29 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/:username/followers, GET} route[39m[38;5;3m +1ms[39m
+app2-1      | [32m[Nest] 44  - [39m02/21/2024, 8:56:30 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +738ms[39m
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 29 (SIGIO) received
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 28 exited with code 0
+database-1  | 2024-02-21 17:41:17.373 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:41:25.444 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:41:25.444 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:41:25.444 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:41:49.016 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:41:49.016 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:41:49.016 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:42:22.520 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:42:22.520 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 32 exited with code 0
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: worker process 34 exited with code 0
+nginx-1     | 2024/02/21 20:56:20 [notice] 1#1: exit
+nginx-1     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+nginx-1     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1     | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1     | 2024/02/21 20:56:21 [emerg] 1#1: host not found in upstream "fire:3000" in /etc/nginx/conf.d/default.conf:2
+database-1  | 2024-02-21 17:42:22.520 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:42:29.768 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:42:29.768 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:42:29.768 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:44:00.033 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:44:00.033 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:44:00.033 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:44:01.687 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 17:44:02.352 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.608 s, sync=0.036 s, total=0.666 s; sync files=7, longest=0.013 s, average=0.006 s; distance=8 kB, estimate=8 kB
+database-1  | 2024-02-21 17:44:51.469 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:44:51.469 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:44:51.469 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:45:01.603 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+nginx-1     | nginx: [emerg] host not found in upstream "fire:3000" in /etc/nginx/conf.d/default.conf:2
+database-1  | 2024-02-21 17:45:01.603 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:45:01.603 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:45:16.097 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:45:16.097 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:45:16.097 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:45:44.943 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:45:44.943 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:45:44.943 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:45:55.656 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:45:55.656 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:45:55.656 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:46:42.493 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:46:42.493 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:46:42.493 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:47:22.729 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:47:22.729 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:47:22.729 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:47:27.365 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:47:27.365 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:47:27.365 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:47:28.189 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:47:28.189 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:47:28.189 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:47:29.547 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:47:29.547 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:47:29.547 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:49:02.319 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 17:49:02.765 UTC [28] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.407 s, sync=0.017 s, total=0.446 s; sync files=5, longest=0.013 s, average=0.004 s; distance=11 kB, estimate=11 kB
+database-1  | 2024-02-21 17:49:40.379 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:49:40.379 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:49:40.379 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:50:15.026 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:50:15.026 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:50:15.026 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:50:58.330 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:50:58.330 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:50:58.330 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:51:07.534 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:51:07.534 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:51:07.534 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:52:44.118 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:52:44.118 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:52:44.118 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:53:36.218 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:53:36.218 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:53:36.218 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:54:02.863 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 17:54:03.326 UTC [28] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.408 s, sync=0.015 s, total=0.464 s; sync files=5, longest=0.013 s, average=0.003 s; distance=12 kB, estimate=12 kB
+database-1  | 2024-02-21 17:54:16.888 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:54:16.888 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:54:16.888 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:56:30.285 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:56:30.285 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:56:30.285 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:56:48.339 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:56:48.339 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:56:48.339 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:57:32.649 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:57:32.649 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:57:32.649 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:57:34.679 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:57:34.679 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:57:34.679 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:57:47.332 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:57:47.332 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:57:47.332 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:58:13.136 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:58:13.136 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:58:13.136 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:58:20.003 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:58:20.003 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:58:20.003 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:58:32.318 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:58:32.318 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:58:32.318 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:59:02.423 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 17:59:02.868 UTC [28] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.407 s, sync=0.015 s, total=0.446 s; sync files=5, longest=0.013 s, average=0.003 s; distance=9 kB, estimate=12 kB
+database-1  | 2024-02-21 17:59:08.832 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:59:08.832 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:59:08.832 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:59:31.241 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:59:31.241 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:59:31.241 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 17:59:55.113 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 17:59:55.113 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 17:59:55.113 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:00:23.265 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 18:00:23.265 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 18:00:23.265 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:00:31.225 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 18:00:31.225 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 18:00:31.225 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:02:39.022 UTC [22376] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 18:02:39.022 UTC [22376] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 18:02:39.022 UTC [22376] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:04:02.931 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:04:03.575 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.607 s, sync=0.010 s, total=0.645 s; sync files=7, longest=0.005 s, average=0.002 s; distance=12 kB, estimate=12 kB
+database-1  | 2024-02-21 18:09:02.675 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:09:03.331 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.609 s, sync=0.015 s, total=0.656 s; sync files=7, longest=0.013 s, average=0.003 s; distance=11 kB, estimate=12 kB
+database-1  | 2024-02-21 18:19:12.146 UTC [26526] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 18:19:12.146 UTC [26526] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 18:19:12.146 UTC [26526] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:19:49.882 UTC [26526] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 18:19:49.882 UTC [26526] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 18:19:49.882 UTC [26526] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:20:12.083 UTC [26526] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 18:20:12.083 UTC [26526] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 18:20:12.083 UTC [26526] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:24:02.627 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:24:03.782 UTC [28] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.118 s, sync=0.006 s, total=1.155 s; sync files=10, longest=0.003 s, average=0.001 s; distance=29 kB, estimate=29 kB
+database-1  | 2024-02-21 18:32:31.446 UTC [27339] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 18:32:31.446 UTC [27339] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 18:32:31.446 UTC [27339] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 18:34:02.980 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:34:03.650 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.609 s, sync=0.016 s, total=0.671 s; sync files=7, longest=0.013 s, average=0.003 s; distance=5 kB, estimate=26 kB
+database-1  | 2024-02-21 18:39:02.748 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:39:03.421 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.608 s, sync=0.009 s, total=0.674 s; sync files=7, longest=0.003 s, average=0.002 s; distance=6 kB, estimate=24 kB
+database-1  | 2024-02-21 18:44:02.520 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:44:03.193 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.608 s, sync=0.019 s, total=0.673 s; sync files=7, longest=0.016 s, average=0.003 s; distance=6 kB, estimate=23 kB
+database-1  | 2024-02-21 18:54:02.384 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:54:03.043 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.608 s, sync=0.007 s, total=0.659 s; sync files=7, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=21 kB
+database-1  | 2024-02-21 18:59:02.140 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 18:59:02.824 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.609 s, sync=0.042 s, total=0.685 s; sync files=7, longest=0.033 s, average=0.006 s; distance=8 kB, estimate=20 kB
+database-1  | 2024-02-21 19:04:02.920 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 19:04:03.627 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.608 s, sync=0.046 s, total=0.708 s; sync files=7, longest=0.016 s, average=0.007 s; distance=8 kB, estimate=19 kB
+database-1  | 2024-02-21 19:09:02.727 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 19:09:03.973 UTC [28] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.211 s, sync=0.003 s, total=1.246 s; sync files=12, longest=0.003 s, average=0.001 s; distance=32 kB, estimate=32 kB
+database-1  | 2024-02-21 19:14:02.991 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 19:14:03.678 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.612 s, sync=0.045 s, total=0.687 s; sync files=7, longest=0.033 s, average=0.007 s; distance=13 kB, estimate=30 kB
+database-1  | 2024-02-21 19:19:02.775 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 19:19:03.472 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.608 s, sync=0.042 s, total=0.697 s; sync files=7, longest=0.013 s, average=0.006 s; distance=13 kB, estimate=28 kB
+database-1  | 2024-02-21 19:21:22.611 UTC [30888] ERROR:  duplicate key value violates unique constraint "User_username_key"
+database-1  | 2024-02-21 19:21:22.611 UTC [30888] DETAIL:  Key (username)=(pietro) already exists.
+database-1  | 2024-02-21 19:21:22.611 UTC [30888] STATEMENT:  INSERT INTO "public"."User" ("email","accessToken","username","password","displayName") VALUES ($1,$2,$3,$4,$5) RETURNING "public"."User"."id", "public"."User"."email", "public"."User"."accessToken", "public"."User"."username", "public"."User"."password", "public"."User"."displayName", "public"."User"."bio"
+database-1  | 2024-02-21 19:24:02.523 UTC [28] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 19:24:03.178 UTC [28] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.608 s, sync=0.016 s, total=0.655 s; sync files=7, longest=0.013 s, average=0.003 s; distance=7 kB, estimate=26 kB
+database-1  | 2024-02-21 20:56:20.614 UTC [1] LOG:  received fast shutdown request
+database-1  | 2024-02-21 20:56:20.627 UTC [1] LOG:  aborting any active transactions
+database-1  | 2024-02-21 20:56:20.650 UTC [52] FATAL:  terminating connection due to administrator command
+database-1  | 2024-02-21 20:56:20.651 UTC [54] FATAL:  terminating connection due to administrator command
+database-1  | 2024-02-21 20:56:20.655 UTC [53] FATAL:  terminating connection due to administrator command
+database-1  | 2024-02-21 20:56:20.656 UTC [55] FATAL:  terminating connection due to administrator command
+database-1  | 2024-02-21 20:56:20.673 UTC [1] LOG:  background worker "logical replication launcher" (PID 33) exited with exit code 1
+database-1  | 2024-02-21 20:56:20.699 UTC [28] LOG:  shutting down
+database-1  | 2024-02-21 20:56:20.707 UTC [28] LOG:  checkpoint starting: shutdown immediate
+database-1  | 2024-02-21 20:56:20.757 UTC [28] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.059 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=23 kB
+database-1  | 2024-02-21 20:56:20.774 UTC [1] LOG:  database system is shut down
+database-1  | 
+database-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+database-1  | 
+database-1  | 2024-02-21 20:56:22.644 UTC [1] LOG:  starting PostgreSQL 15.6 (Debian 15.6-1.pgdg120+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+database-1  | 2024-02-21 20:56:22.644 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+database-1  | 2024-02-21 20:56:22.644 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+database-1  | 2024-02-21 20:56:22.671 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+database-1  | 2024-02-21 20:56:22.692 UTC [28] LOG:  database system was shut down at 2024-02-21 20:56:20 UTC
+database-1  | 2024-02-21 20:56:22.751 UTC [1] LOG:  database system is ready to accept connections
+database-1  | 2024-02-21 21:01:22.792 UTC [26] LOG:  checkpoint starting: time
+database-1  | 2024-02-21 21:01:22.855 UTC [26] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.005 s, total=0.064 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB
