@@ -3,6 +3,7 @@ import { User } from '@prisma/client';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { PrismaService } from 'src/modules/common/provider/prisma.service';
 import Followers from '../model/Followers';
+import { UserInformation } from '../model/UserInformation';
 
 export class UnknownAccountError extends Error {
   message = 'Unable to find account';
@@ -70,6 +71,26 @@ export class FollowService {
     });
 
     return user;
+  }
+
+  async info(username: string): Promise<UserInformation> {
+    try {
+      const result = await this.prisma.user.findUnique({
+        where: {
+          username,
+        },
+      });
+
+      return {
+        bio: result.bio,
+        displayName: result.displayName,
+        id: result.id,
+      };
+    } catch (error) {
+      if (error instanceof PrismaClientKnownRequestError) {
+        if (error.code == 'P2025') throw new UnknownAccountError();
+      }
+    }
   }
 
   async followUser(user: User, username: string) {

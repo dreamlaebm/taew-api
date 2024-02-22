@@ -26,6 +26,7 @@ import {
   WithToken,
 } from 'src/modules/auth/flow/users.pipe';
 import Followers from '../model/Followers';
+import { UserInformation } from '../model/UserInformation';
 
 @Controller('/api/user')
 @ApiTags('follow')
@@ -84,6 +85,19 @@ export class FollowController {
       if (error instanceof UnknownAccountError)
         throw new NotFoundException('NO_SUCH_ACCOUNT_OR_NOT_FOLLOWING');
 
+      throw error;
+    }
+  }
+
+  @Get(':username/info')
+  @ApiOperation({ summary: 'Get user information' })
+  @ApiResponse({ status: HttpStatus.OK, type: UserInformation })
+  async info(@Param('username') username: string): Promise<UserInformation> {
+    try {
+      return await this.followService.info(username);
+    } catch (error) {
+      if (error instanceof UnknownAccountError)
+        throw new NotFoundException('NO_SUCH_ACCOUNT');
       throw error;
     }
   }

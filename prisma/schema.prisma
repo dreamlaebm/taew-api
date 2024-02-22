@@ -21,4 +21,17 @@ model User {
 
   followedBy User[] @relation("UserFollows")
   following  User[] @relation("UserFollows")
+  likedPosts Post[]
+}
+
+model Post {
+  id         Int  @id @default(autoincrement())
+  referralId Int?
+
+  likedBy User[]
+
+  referral Post?  @relation("PostComments", fields: [referralId], references: [id])
+  comments Post[] @relation("PostComments")
+
+  content String @db.VarChar(360)
 }
