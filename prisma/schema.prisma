@@ -28,8 +28,8 @@ model User {
 model Post {
   id         Int    @id @default(autoincrement())
   referralId Int?
-  userId     Int
-  author     User   @relation(fields: [userId], references: [id])
+  authorId   Int
+  author     User   @relation(fields: [authorId], references: [id])
   content    String @db.VarChar(360)
 
   likedBy  User[] @relation("UserLikedPosts")

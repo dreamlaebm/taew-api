@@ -2,13 +2,23 @@ import {
   Body,
   ConflictException,
   Controller,
+  Get,
   HttpCode,
   HttpStatus,
   NotFoundException,
   Param,
   Post,
+  Query,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  ApiOperation,
+  ApiParam,
+  ApiQuery,
+  ApiResponse,
+  ApiTags,
+} from '@nestjs/swagger';
 import {
   MustAuth,
   User,
@@ -17,11 +27,14 @@ import {
 } from 'src/modules/auth/flow/users.pipe';
 import { CreatePostDto } from '../model/CreatePost.input';
 import {
+  NoPostsAvaliable,
   PostService,
   UnknownPostOrAlreadyDidAction,
   UnknownReferralError,
 } from '../service/post.service';
 import { CreatePostResponse } from '../model/CreatePost.output';
+import { AvaliablePages } from '../model/AvaliablePages.output';
+import { PagesInput } from '../model/Pages.input';
 
 @ApiTags('post')
 @Controller('/api/post')
@@ -101,6 +114,33 @@ export class PostController {
       if (error instanceof UnknownPostOrAlreadyDidAction)
         throw new ConflictException('ALREADY_UNLIKED_OR_POST_DOESNT_EXIST');
       throw error;
+    }
+  }
+
+  @Get(':username/posts/:page')
+  @UsePipes(
+    new ValidationPipe({
+      transform: true,
+    }),
+  )
+  async list(@Param() { username, page }: PagesInput) {
+    return await this.postService.listByPage(username, page);
+  }
+
+  @Get(':username/avaliable-pages')
+  @ApiResponse({ status: HttpStatus.OK, type: AvaliablePages })
+  @ApiResponse({
+    status: HttpStatus.NOT_FOUND,
+    description: 'Unable to find any posts related to :username',
+  })
+  async avaliablePages(@Param('username') username: string) {
+    try {
+      const avaliablePages = await this.postService.avaliablePages(username);
+
+      return new AvaliablePages(avaliablePages);
+    } catch (error) {
+      if (error instanceof NoPostsAvaliable)
+        throw new NotFoundException('NO_POSTS_AVALIABLE');
     }
   }
 }

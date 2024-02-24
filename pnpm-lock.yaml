@@ -26,6 +26,9 @@ dependencies:
   argon2:
     specifier: ^0.31.2
     version: 0.31.2
+  class-transform:
+    specifier: ^0.7.0
+    version: 0.7.0
   class-transformer:
     specifier: ^0.5.1
     version: 0.5.1
@@ -2489,6 +2492,10 @@ packages:
   /cjs-module-lexer@1.2.3:
     resolution: {integrity: sha512-0TNiGstbQmCFwt4akjjBg5pLRTSyj/PkWQ1ZoO2zntmg9yLqSRxwEa4iCfQLGjqhiqBfOJa7W/E8wfGrTDmlZQ==}
     dev: true
+
+  /class-transform@0.7.0:
+    resolution: {integrity: sha512-j5O1TkgxsR836BOgyG83i5gKH3yaqdxMIbwviV3qJpcjGh1Vfil1CjtXn8RHgvtLvbosUutoewa+RA3Qty4SFA==}
+    dev: false
 
   /class-transformer@0.5.1:
     resolution: {integrity: sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==}

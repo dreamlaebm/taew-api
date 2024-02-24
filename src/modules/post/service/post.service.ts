@@ -3,6 +3,7 @@ import { PrismaService } from 'src/modules/common/provider/prisma.service';
 import { CreatePostDto } from '../model/CreatePost.input';
 import { User } from '@prisma/client';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
+import { POSTS_PER_PAGE } from 'src/constants';
 
 export class UnknownReferralError extends Error {
   message = 'Unknown referral';
@@ -10,6 +11,10 @@ export class UnknownReferralError extends Error {
 
 export class UnknownPostOrAlreadyDidAction extends Error {
   message = 'Unknown post or already did the action';
+}
+
+export class NoPostsAvaliable extends Error {
+  message = 'No posts avaliable';
 }
 
 @Injectable()
@@ -25,10 +30,11 @@ export class PostService {
       whoCreated: { id, username },
       post: postDto,
     });
+
     try {
       const response = await this.prisma.post.create({
         data: {
-          userId: id,
+          authorId: id,
           ...postDto,
         },
       });
@@ -118,5 +124,68 @@ export class PostService {
       }
       throw error;
     }
+  }
+
+  async avaliablePages(username: string) {
+    const avaliablePosts = await this.prisma.post.count({
+      where: {
+        author: { username },
+      },
+    });
+
+    if (avaliablePosts == 0) throw new NoPostsAvaliable();
+    if (avaliablePosts <= 20) return 1;
+
+    return avaliablePosts / POSTS_PER_PAGE;
+  }
+
+  async listByPage(username: string, page: number) {
+    const USER_ALLOWLIST = {
+      displayName: true,
+      username: true,
+
+      id: true,
+    };
+    return await this.prisma.post.findMany({
+      where: {
+        author: {
+          username,
+        },
+      },
+      cursor: {
+        id: page != 1 ? POSTS_PER_PAGE * page : 1,
+      },
+      skip: page != 1 ? page : undefined,
+      take: POSTS_PER_PAGE,
+      include: {
+        author: {
+          select: {
+            displayName: true,
+            username: true,
+            id: true,
+          },
+        },
+        likedBy: {
+          select: USER_ALLOWLIST,
+        },
+        comments: {
+          select: {
+            authorId: true,
+
+            author: {
+              select: { username: true },
+            },
+
+            referral: {
+              select: {
+                referralId: true,
+                content: true,
+              },
+            },
+          },
+        },
+        referral: true,
+      },
+    });
   }
 }
