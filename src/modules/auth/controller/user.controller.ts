@@ -13,14 +13,9 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiOperation,
-  ApiResponse,
-  ApiTags,
-} from '@nestjs/swagger';
-import CreateUserDto from '../model/CreateUserDto';
-import { UserMutationResponse } from '../model/CreateUserResponse';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import CreateUserDto from '../model/CreateUser.input';
+import { UserMutationResponse } from '../model/CreateUser.output';
 import {
   CredentialMismatch,
   UserAlreadyExistsError,
@@ -28,7 +23,12 @@ import {
   UserService,
 } from '../service/UserService';
 import LoginUserDto from '../model/LoginUserDto';
-import { User, UsersFromTokenPipe, WithToken } from '../flow/users.pipe';
+import {
+  MustAuth,
+  User,
+  UsersFromTokenPipe,
+  WithToken,
+} from '../flow/users.pipe';
 import DecryptedAccount from '../model/DecryptedResponse';
 
 @Controller('/api/auth')
@@ -91,7 +91,7 @@ export default class UserController {
 
   @Get('decrypt')
   @ApiOperation({ summary: 'Recovers non-sensible data from the token' })
-  @ApiBearerAuth()
+  @MustAuth()
   @ApiResponse({ status: HttpStatus.OK, type: DecryptedAccount })
   decrypt(@WithToken(UsersFromTokenPipe) user: User): DecryptedAccount {
     return new DecryptedAccount(user.id, user.username, user.displayName);
@@ -99,7 +99,7 @@ export default class UserController {
 
   @Get('refresh')
   @ApiOperation({ summary: 'Refreshes the token' })
-  @ApiBearerAuth()
+  @MustAuth()
   @ApiResponse({ status: HttpStatus.OK, type: UserMutationResponse })
   async refresh(
     @WithToken(UsersFromTokenPipe) user: User,
@@ -115,7 +115,7 @@ export default class UserController {
 
   @Post('delete')
   @ApiOperation({ summary: 'Deletes the account' })
-  @ApiBearerAuth()
+  @MustAuth()
   @ApiResponse({
     status: HttpStatus.NO_CONTENT,
     description: 'Deleted the account.',

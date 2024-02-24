@@ -1,9 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { PrismaService } from 'src/modules/common/provider/prisma.service';
 import Followers from '../model/Followers';
 import { UserInformation } from '../model/UserInformation';
+import { UpdateUserDto } from '../model/UpdateUser.input';
 
 export class UnknownAccountError extends Error {
   message = 'Unable to find account';
@@ -18,10 +19,16 @@ export class NotFollowingError extends Error {
 }
 
 @Injectable()
-export class FollowService {
+export class SocialService {
+  private readonly logger = new Logger(SocialService.name);
   public constructor(private prisma: PrismaService) {}
 
   async unfollow(user: User, username: string) {
+    this.logger.verbose('A user unfollowed another user', {
+      who: user.username,
+      target: username,
+    });
+
     try {
       await this.prisma.user.update({
         where: {
@@ -94,6 +101,11 @@ export class FollowService {
   }
 
   async followUser(user: User, username: string) {
+    this.logger.verbose('A user followed other user', {
+      who: user.username,
+      target: username,
+    });
+
     try {
       await this.prisma.user.update({
         where: {
@@ -117,7 +129,18 @@ export class FollowService {
         if (error.code == 'P2025') throw new UnknownAccountError();
         if (error.code == 'P2016') throw new AlreadyFollowingError();
       }
+
       throw error;
     }
+  }
+
+  async update({ id: targetId }: User, updateData: UpdateUserDto) {
+    await this.prisma.user.update({
+      where: {
+        id: targetId,
+      },
+
+      data: updateData,
+    });
   }
 }

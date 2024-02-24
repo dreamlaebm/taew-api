@@ -1,11 +1,12 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from 'src/modules/common/provider/prisma.service';
 import { randomBytes } from 'crypto';
 import { Prisma, User } from '@prisma/client';
 import { JwtService } from '@nestjs/jwt';
 import { hash, verify } from 'argon2';
-import CreateUserDto from '../model/CreateUserDto';
+import CreateUserDto from '../model/CreateUser.input';
 import LoginUserDto from '../model/LoginUserDto';
+import { pickKeys } from 'src/utils/object';
 
 export class UserAlreadyExistsError extends Error {}
 
@@ -19,6 +20,8 @@ export class CredentialMismatch extends Error {
 
 @Injectable()
 export class UserService {
+  private readonly logger = new Logger(UserService.name);
+
   public constructor(
     private readonly prisma: PrismaService,
     private jwtService: JwtService,
@@ -28,7 +31,8 @@ export class UserService {
     { email, password }: LoginUserDto,
     refreshes?: boolean,
   ): Promise<string> {
-    const account = await this.prisma.user.findFirst({
+    this.logger.verbose('Trying to login-in', { email, refreshes });
+    const account = await this.prisma.user.findUnique({
       where: {
         email,
         password: refreshes ? password : undefined,
@@ -51,6 +55,10 @@ export class UserService {
   }
 
   public async deleteAccount(user: User) {
+    this.logger.verbose(
+      'Deleted account',
+      pickKeys(user, ['bio', 'displayName', 'email', 'id']),
+    );
     await this.prisma.user.delete({
       where: {
         id: user.id,
@@ -59,6 +67,11 @@ export class UserService {
   }
 
   public async create(createUserDto: CreateUserDto) {
+    this.logger.verbose(
+      'Trying to create the account',
+      pickKeys(createUserDto, ['displayName', 'email', 'username']),
+    );
+
     const accessToken = randomBytes(32).toString('hex');
 
     try {

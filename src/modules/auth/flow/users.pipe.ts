@@ -1,5 +1,6 @@
 import {
   ExecutionContext,
+  HttpStatus,
   Injectable,
   Logger,
   PipeTransform,
@@ -9,6 +10,7 @@ import {
 import { JwtService } from '@nestjs/jwt';
 import { PrismaService } from 'src/modules/common/provider/prisma.service';
 import { User } from '@prisma/client';
+import { ApiBearerAuth, ApiResponse } from '@nestjs/swagger';
 export { User };
 
 @Injectable()
@@ -24,14 +26,14 @@ export class UsersFromTokenPipe implements PipeTransform {
     try {
       const payload = await this.jwtService.verifyAsync(token);
 
-      return await this.prisma.user.findFirstOrThrow({
+      return await this.prisma.user.findUniqueOrThrow({
         where: {
           accessToken: payload.token,
           username: payload.username,
         },
       });
     } catch (error) {
-      this.logger.warn('unable to authenticate user', error);
+      this.logger.warn('Unable to authenticate user', error);
       throw new UnauthorizedException('Invalid account');
     }
   }
@@ -52,3 +54,21 @@ export const WithToken = createParamDecorator(
     return token;
   },
 );
+
+/**
+ * @brief Adds the API documentation needed for authenticated requests
+ */
+export function MustAuth() {
+  return function (
+    target: any,
+    propertyKey: string,
+    descriptor: PropertyDescriptor,
+  ) {
+    ApiResponse({
+      status: HttpStatus.UNAUTHORIZED,
+      description: 'Your Authorization is either invalid or expired',
+    })(target, propertyKey, descriptor);
+
+    ApiBearerAuth()(target, propertyKey, descriptor);
+  };
+}

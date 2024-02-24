@@ -8,36 +8,30 @@ import {
   Param,
   Post,
 } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiOperation,
-  ApiParam,
-  ApiResponse,
-  ApiTags,
-} from '@nestjs/swagger';
+import { ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 import {
   AlreadyFollowingError,
-  FollowService,
+  SocialService,
   UnknownAccountError,
-} from '../service/follow.service';
+} from '../service/social.service';
 import {
+  MustAuth,
   User,
   UsersFromTokenPipe,
   WithToken,
 } from 'src/modules/auth/flow/users.pipe';
 import Followers from '../model/Followers';
-import { UserInformation } from '../model/UserInformation';
 
 @Controller('/api/user')
 @ApiTags('follow')
 export class FollowController {
-  public constructor(private readonly followService: FollowService) {}
+  public constructor(private readonly socialService: SocialService) {}
 
   @Post(':username/follow')
   @ApiOperation({ summary: 'Follow a user' })
   @ApiResponse({
     status: HttpStatus.NO_CONTENT,
-    description: 'Followed the user',
+    description: 'You followed the user',
   })
   @ApiResponse({
     status: HttpStatus.NOT_FOUND,
@@ -48,14 +42,14 @@ export class FollowController {
     description: 'You are already following the user',
   })
   @ApiParam({ name: 'username', description: 'the username to follow' })
-  @ApiBearerAuth()
+  @MustAuth()
   @HttpCode(HttpStatus.NO_CONTENT)
   async follow(
     @WithToken(UsersFromTokenPipe) user: User,
     @Param('username') username: string,
   ) {
     try {
-      await this.followService.followUser(user, username);
+      await this.socialService.followUser(user, username);
     } catch (error) {
       if (error instanceof UnknownAccountError)
         throw new NotFoundException('NO_SUCH_ACCOUNT');
@@ -73,14 +67,18 @@ export class FollowController {
     status: HttpStatus.NOT_FOUND,
     description: 'Couldnt find the user or not following the account',
   })
-  @ApiBearerAuth()
+  @ApiResponse({
+    status: HttpStatus.NO_CONTENT,
+    description: 'You unfollowed the target account',
+  })
+  @MustAuth()
   @HttpCode(HttpStatus.NO_CONTENT)
   async unfollow(
     @WithToken(UsersFromTokenPipe) user: User,
     @Param('username') username: string,
   ) {
     try {
-      await this.followService.unfollow(user, username);
+      await this.socialService.unfollow(user, username);
     } catch (error) {
       if (error instanceof UnknownAccountError)
         throw new NotFoundException('NO_SUCH_ACCOUNT_OR_NOT_FOLLOWING');
@@ -89,23 +87,10 @@ export class FollowController {
     }
   }
 
-  @Get(':username/info')
-  @ApiOperation({ summary: 'Get user information' })
-  @ApiResponse({ status: HttpStatus.OK, type: UserInformation })
-  async info(@Param('username') username: string): Promise<UserInformation> {
-    try {
-      return await this.followService.info(username);
-    } catch (error) {
-      if (error instanceof UnknownAccountError)
-        throw new NotFoundException('NO_SUCH_ACCOUNT');
-      throw error;
-    }
-  }
-
   @Get(':username/followers')
   @ApiOperation({ summary: 'Get the user followers' })
   @ApiResponse({ status: HttpStatus.OK, type: Followers })
   async followers(@Param('username') username: string): Promise<Followers> {
-    return await this.followService.followers(username);
+    return await this.socialService.followers(username);
   }
 }
