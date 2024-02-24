@@ -7,7 +7,10 @@ export class PagesInput {
   @Length(2, 28)
   username: string;
 
-  @ApiProperty({ description: 'The page number', minimum: 1, example: 1 })
+  @ApiProperty({
+    description: 'The page number',
+    minimum: 1,
+  })
   @IsPositive()
   @Transform(({ value }) => {
     return Number(value);

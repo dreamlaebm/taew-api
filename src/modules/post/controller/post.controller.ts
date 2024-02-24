@@ -8,14 +8,12 @@ import {
   NotFoundException,
   Param,
   Post,
-  Query,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
 import {
+  ApiOkResponse,
   ApiOperation,
-  ApiParam,
-  ApiQuery,
   ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
@@ -35,6 +33,7 @@ import {
 import { CreatePostResponse } from '../model/CreatePost.output';
 import { AvaliablePages } from '../model/AvaliablePages.output';
 import { PagesInput } from '../model/Pages.input';
+import { Post as PostModel } from '../model/post.model';
 
 @ApiTags('post')
 @Controller('/api/post')
@@ -123,6 +122,7 @@ export class PostController {
       transform: true,
     }),
   )
+  @ApiOkResponse({ type: PostModel })
   async list(@Param() { username, page }: PagesInput) {
     return await this.postService.listByPage(username, page);
   }
