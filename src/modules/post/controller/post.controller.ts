@@ -1,9 +1,11 @@
 import {
   Body,
+  ConflictException,
   Controller,
   HttpCode,
   HttpStatus,
   NotFoundException,
+  Param,
   Post,
 } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
@@ -14,7 +16,11 @@ import {
   WithToken,
 } from 'src/modules/auth/flow/users.pipe';
 import { CreatePostDto } from '../model/CreatePost.input';
-import { PostService, UnknownReferralError } from '../service/post.service';
+import {
+  PostService,
+  UnknownPostOrAlreadyDidAction,
+  UnknownReferralError,
+} from '../service/post.service';
 import { CreatePostResponse } from '../model/CreatePost.output';
 
 @ApiTags('post')
@@ -47,6 +53,53 @@ export class PostController {
       if (error instanceof UnknownReferralError)
         throw new NotFoundException('REFERRAL_POST_DOESNT_EXIST');
 
+      throw error;
+    }
+  }
+
+  @Post(':postId/like')
+  @MustAuth()
+  @ApiOperation({ summary: 'Likes a post' })
+  @ApiResponse({ status: HttpStatus.NO_CONTENT, description: 'Liked the post' })
+  @ApiResponse({
+    status: HttpStatus.CONFLICT,
+    description: 'You already liked the post or the post doesnt exist',
+  })
+  @HttpCode(HttpStatus.NO_CONTENT)
+  async like(
+    @WithToken(UsersFromTokenPipe) user: User,
+    @Param('postId') postId: string,
+  ) {
+    try {
+      await this.postService.like(user, Number(postId));
+    } catch (error) {
+      if (error instanceof UnknownPostOrAlreadyDidAction)
+        throw new ConflictException('ALREADY_LIKED_OR_POST_DOESNT_EXIST');
+      throw error;
+    }
+  }
+
+  @Post(':postId/unlike')
+  @MustAuth()
+  @ApiOperation({ summary: 'Unlikes a post' })
+  @ApiResponse({
+    status: HttpStatus.NO_CONTENT,
+    description: 'Unliked the post',
+  })
+  @ApiResponse({
+    status: HttpStatus.CONFLICT,
+    description: 'You already unliked the post or the post doesnt exist',
+  })
+  @HttpCode(HttpStatus.NO_CONTENT)
+  async unlike(
+    @WithToken(UsersFromTokenPipe) user: User,
+    @Param('postId') postId: string,
+  ) {
+    try {
+      await this.postService.unlike(user, Number(postId));
+    } catch (error) {
+      if (error instanceof UnknownPostOrAlreadyDidAction)
+        throw new ConflictException('ALREADY_UNLIKED_OR_POST_DOESNT_EXIST');
       throw error;
     }
   }
